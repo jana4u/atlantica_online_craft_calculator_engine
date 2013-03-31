@@ -1,8 +1,8 @@
 <% if @item %>
-  $('#general').html('<%= js_escape_html(partial('general')) %>');
-  $('#my').html('<%= js_escape_html(partial('my')) %>');
+  $('#general').html('<%= j(render partial: 'general') %>');
+  $('#my').html('<%= j(render partial: 'my') %>');
 <% else %>
-  $('#item_name').replaceWith('<%= js_escape_html(items_select_tag) %>');
+  $('#item_name').replaceWith('<%= j(items_select_tag) %>');
   $("#item_name").change(function() {
   if ($(this).prop("selectedIndex") > 0) {
   $(this).closest("form").submit();

@@ -11,7 +11,7 @@
 <% unless session[:auto_craft] %>
   <p>
     Warning: You have not set your auto-craft level. Level 1 will be used.
-    <%= link_to("Set your auto-craft level", url(:"custom-skills")) %>.
+    <%= link_to("Set your auto-craft level", custom_skills_path) %>.
   </p>
 <% end %>
 
