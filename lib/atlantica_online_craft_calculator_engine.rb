@@ -1,0 +1,4 @@
+require "atlantica_online_craft_calculator_engine/engine"
+
+module AtlanticaOnlineCraftCalculatorEngine
+end
