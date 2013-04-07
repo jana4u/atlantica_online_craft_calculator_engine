@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require twitter/bootstrap
 
 jQuery(function($) {
   $("form[data-remote=true]")
