@@ -1,0 +1,11 @@
+Description:
+    AtlanticaOnlineCraftCalculatorEngine::ApplicationController is added to your
+    application. You can change its parent from default ActionController::Base to
+    ::ApplicationController to inherit authentication etc. from your application
+    or change layout.
+
+Example:
+    rails generate atlantica_online_craft_calculator_engine:install
+
+    This will create:
+        app/controllers/atlantica_online_craft_calculator_engine/application_controller.rb

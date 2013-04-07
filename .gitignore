@@ -6,3 +6,4 @@ test/dummy/log/*.log
 test/dummy/tmp/
 test/dummy/.sass-cache
 .idea
+test/dummy/app/controllers/atlantica_online_craft_calculator_engine/application_controller.rb
