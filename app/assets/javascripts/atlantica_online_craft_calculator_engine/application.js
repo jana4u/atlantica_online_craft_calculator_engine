@@ -15,7 +15,7 @@
 //= require twitter/bootstrap
 
 jQuery(function($) {
-  $("form[data-remote=true]")
+  $(".craft-calculator form[data-remote=true]")
     .bind("ajax:before", function() {
       $('#error').html("");
       $("#ajax-loader").show();
@@ -29,7 +29,7 @@ jQuery(function($) {
       $("#ajax-loader").hide();
     });
 
-  $("select").change(function() {
+  $(".craft-calculator select").change(function() {
     $(this).closest("form").submit();
   });
 });
