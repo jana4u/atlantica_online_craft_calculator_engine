@@ -1,5 +1,6 @@
 require "atlantica_online_craft_calculator_engine/engine"
 require 'atlantica_online_craft_calculator_engine/integer_extractor'
+require 'atlantica_online_craft_calculator_engine/base_controller'
 
 require 'atlantica_online_craft_calculator'
 
