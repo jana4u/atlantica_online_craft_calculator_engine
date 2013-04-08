@@ -11,7 +11,7 @@
 <% end %>
 try
 {
-_gaq.push(['_trackPageview', '<%= request.fullpath.gsub(/(&|\?)_=[0-9]*/, '') %>']);
+_gaq.push(['_trackPageview', '<%= raw request.fullpath %>']);
 }
 catch(err)
 {
