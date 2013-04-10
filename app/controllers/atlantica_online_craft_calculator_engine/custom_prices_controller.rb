@@ -9,25 +9,25 @@ module AtlanticaOnlineCraftCalculatorEngine
       rescue AtlanticaOnlineCraftCalculator::InvalidItem
         @items = AtlanticaOnlineCraftCalculator::Item.ordered_ingredient_items
       end
-      @custom_prices = session[:custom_prices] || {}
+      @custom_prices = custom_prices_store.all
     end
 
     def update
-      session[:custom_prices] = {}
+      custom_prices_hash = {}
 
       if params[:custom_prices]
-        params[:custom_prices].each do |item_name, price|
-          unless price.blank?
-            session[:custom_prices][CGI::unescape(item_name)] = IntegerExtractor.non_negative_integer_from_string(price)
-          end
+        params[:custom_prices].each do |key, value|
+          custom_prices_hash[CGI::unescape(key)] = value
         end
       end
+
+      custom_prices_store.update_all(custom_prices_hash)
 
       redirect_to item_custom_prices_url
     end
 
     def destroy
-      session[:custom_prices] = {}
+      custom_prices_store.delete_all
 
       redirect_to item_custom_prices_url
     end

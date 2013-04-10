@@ -3,7 +3,7 @@ require_dependency "atlantica_online_craft_calculator_engine/application_control
 module AtlanticaOnlineCraftCalculatorEngine
   class ItemsController < ApplicationController
     def index
-      @custom_prices = session[:custom_prices] || {}
+      @custom_prices = custom_prices_store.all
       AtlanticaOnlineCraftCalculator::Item.load_data_from_yaml(@custom_prices)
       unless params[:item_name].blank?
         @item = AtlanticaOnlineCraftCalculator::Item.find(params[:item_name])
