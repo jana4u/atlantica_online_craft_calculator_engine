@@ -8,7 +8,7 @@
   <%= link_to("Review or change your prices for this craft", item_custom_prices_url) %>.
 </p>
 
-<% unless session[:auto_craft] %>
+<% unless custom_skills_store.auto_craft %>
   <p>
     Warning: You have not set your auto-craft level. Level 1 will be used.
     <%= link_to("Set your auto-craft level", custom_skills_path) %>.

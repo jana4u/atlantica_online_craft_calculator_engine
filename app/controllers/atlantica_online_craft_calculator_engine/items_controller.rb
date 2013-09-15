@@ -7,7 +7,7 @@ module AtlanticaOnlineCraftCalculatorEngine
       AtlanticaOnlineCraftCalculator::Item.load_data_from_yaml(@custom_prices)
       unless params[:item_name].blank?
         @item = AtlanticaOnlineCraftCalculator::Item.find(params[:item_name])
-        @crafter = AtlanticaOnlineCraftCalculator::Crafter.new(session[:auto_craft] || 1)
+        @crafter = AtlanticaOnlineCraftCalculator::Crafter.new(custom_skills_store.auto_craft || 1)
         if params[:count].blank?
           count = @item.batch_size
         else
