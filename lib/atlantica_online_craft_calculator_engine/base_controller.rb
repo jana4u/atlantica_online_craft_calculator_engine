@@ -11,6 +11,10 @@ module AtlanticaOnlineCraftCalculatorEngine
         def custom_prices_store
           @custom_prices_store ||= CustomPricesSessionStore.new(session)
         end
+
+        def crafting_disabled_store
+          @crafting_disabled_store ||= CraftingDisabledSessionStore.new(session)
+        end
       end
 
       def custom_skills_store

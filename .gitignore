@@ -6,4 +6,6 @@ test/dummy/log/*.log
 test/dummy/tmp/
 test/dummy/.sass-cache
 .idea
+.ruby-version
 test/dummy/app/controllers/atlantica_online_craft_calculator_engine/application_controller.rb
+Gemfile.lock

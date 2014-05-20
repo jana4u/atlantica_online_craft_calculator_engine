@@ -4,7 +4,10 @@ module AtlanticaOnlineCraftCalculatorEngine
   class ItemsController < ApplicationController
     def index
       @custom_prices = custom_prices_store.all
-      AtlanticaOnlineCraftCalculator::Item.load_data_from_yaml(@custom_prices)
+      @crafting_disabled = crafting_disabled_store.all
+      AtlanticaOnlineCraftCalculator::Item.load_data_from_yaml
+      AtlanticaOnlineCraftCalculator::Item.configure_custom_prices(@custom_prices)
+      AtlanticaOnlineCraftCalculator::Item.configure_items_with_crafting_disabled(@crafting_disabled)
       unless params[:item_name].blank?
         @item = AtlanticaOnlineCraftCalculator::Item.find(params[:item_name])
         @crafter = AtlanticaOnlineCraftCalculator::Crafter.new(custom_skills_store.auto_craft || 1)
