@@ -10,7 +10,7 @@ gem "jquery-rails"
 
 gem 'therubyracer'
 gem 'less-rails'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', '< 3'
 gem 'atlantica_online_craft_calculator', :git => 'https://github.com/jana4u/atlantica_online_craft_calculator'
 
 # Declare any dependencies that are still in development here instead of in
