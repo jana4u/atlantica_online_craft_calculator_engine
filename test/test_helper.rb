@@ -16,5 +16,7 @@ end
 
 # make url_helpers for engine routes available in functional tests
 class ActionController::TestCase
-  include AtlanticaOnlineCraftCalculatorEngine::Engine.routes.url_helpers
+  setup do
+    @routes = AtlanticaOnlineCraftCalculatorEngine::Engine.routes
+  end
 end
