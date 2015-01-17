@@ -1,5 +1,5 @@
 module AtlanticaOnlineCraftCalculatorEngine
-  class ApplicationController < ActionController::Base
+  class ApplicationController < ::ApplicationController
     include AtlanticaOnlineCraftCalculatorEngine::BaseController
   end
 end

@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require atlantica_online_craft_calculator_engine/application
 //= require_tree .
