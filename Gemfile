@@ -11,7 +11,6 @@ gem 'rails', '>= 4.2'
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 
-gem 'therubyracer'
 gem 'sass-rails'
 gem 'bootstrap-sass', '< 3'
 gem 'atlantica_online_craft_calculator', :git => 'https://github.com/jana4u/atlantica_online_craft_calculator'
