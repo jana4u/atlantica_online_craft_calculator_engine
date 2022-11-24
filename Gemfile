@@ -1,4 +1,4 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
 
 # Declare your gem's dependencies in atlantica_online_craft_calculator_engine.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
