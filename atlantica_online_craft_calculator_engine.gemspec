@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'atlantica_online_craft_calculator'
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "simplecov"
 end
