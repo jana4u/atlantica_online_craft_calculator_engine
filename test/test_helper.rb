@@ -22,4 +22,12 @@ class ActionController::TestCase
   setup do
     @routes = AtlanticaOnlineCraftCalculatorEngine::Engine.routes
   end
+
+  def some_item_name
+    "Action: Auto-Craft [IV]"
+  end
+
+  def url_escaped_item_name(item_name = some_item_name)
+    CGI::escape(item_name)
+  end
 end

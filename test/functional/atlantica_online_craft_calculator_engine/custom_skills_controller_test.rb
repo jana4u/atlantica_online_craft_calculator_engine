@@ -8,7 +8,7 @@ module AtlanticaOnlineCraftCalculatorEngine
     end
 
     test 'update' do
-      put :update
+      put :update, params: {auto_craft: "120"}
       assert_redirected_to custom_skills_path
     end
   end
