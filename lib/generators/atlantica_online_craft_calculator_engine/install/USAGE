@@ -5,7 +5,7 @@ Description:
     or change layout.
 
 Example:
-    rails generate atlantica_online_craft_calculator_engine:install
+    bin/rails generate atlantica_online_craft_calculator_engine:install
 
     This will create:
         app/controllers/atlantica_online_craft_calculator_engine/application_controller.rb
